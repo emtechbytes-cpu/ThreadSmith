@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreadSmith - AI Viral Thread Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#06b6d4', // cyan-500
+                light: '#22d3ee',   // cyan-400
+                dark: '#0891b2',    // cyan-600
+              },
+              secondary: {
+                DEFAULT: '#8b5cf6', // violet-500
+                light: '#a78bfa',   // violet-400
+                dark: '#7c3aed',    // violet-600
+              },
+              'dark-bg': '#111827', // gray-900
+              'dark-surface': '#1f2937', // gray-800
+              'dark-border': '#374151', // gray-700
+              'light-bg': '#f9fafb', // gray-50
+              'light-surface': '#ffffff',
+              'light-border': '#e5e7eb', // gray-200
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(20px)',
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)',
+                },
+              },
+              'pulse-glow': {
+                '0%, 100%': {
+                  opacity: '1',
+                  transform: 'scale(1)',
+                  boxShadow: '0 0 0 0 rgba(6, 182, 212, 0.4)',
+                },
+                '50%': {
+                  opacity: '0.8',
+                  transform: 'scale(1.1)',
+                  boxShadow: '0 0 10px 10px rgba(6, 182, 212, 0)',
+                },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+              'pulse-glow': 'pulse-glow 2s infinite ease-in-out',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light-bg text-slate-900 dark:bg-dark-bg dark:text-white font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
